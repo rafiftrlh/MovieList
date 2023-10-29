@@ -1,10 +1,10 @@
 "use client";
 import { useGetMovies } from "@/hooks/useMovies";
 import Card from "../components/Card";
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
+import Pagination from "../Utilities/Pagination";
 
 export default function ListMovie() {
   const [sortBy, setSortBy] = useState("popularity.desc");
@@ -32,15 +32,13 @@ export default function ListMovie() {
           </Link>
         ))}
       </div>
-      <div className="flex justify-center gap-10 mt-10 mb-10">
+      {/* <div className="flex justify-center gap-10 mt-10 mb-10">
         <ul className="flex items-center gap-5">
           <li>
             <AiOutlineLeft />
           </li>
           <li>
-            <Link href="/?page=1" className="active:bg-red-500">
-              1
-            </Link>
+            <Link href="/?page=1">1</Link>
           </li>
           <li>
             <Link href="/?page=2">2</Link>
@@ -58,7 +56,8 @@ export default function ListMovie() {
             <AiOutlineRight />
           </li>
         </ul>
-      </div>
+      </div> */}
+      <Pagination />
     </>
   );
 }

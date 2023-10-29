@@ -18,16 +18,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-slate-50`}>
         {children}
-        <footer className="bg-gray-500 py-5 px-16 text-slate-100 text-sm flex flex-col items-center">
-          <div className="container flex justify-between border-b-2 py-5">
+        <footer className="bg-gray-500 p-5 md:px-16 text-slate-100 text-sm flex flex-col items-center">
+          <div className="container flex justify-between border-b-2 py-5 gap-5">
             <div className="w-96">
               <Image
                 src={logo}
                 alt="logo"
-                width="40"
-                height="40"
+                width="30"
+                height="30"
                 className="mb-5"
               />
               <p>
@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
             <div className="">
               <div className="">
                 <h2 className="font-bold">Download</h2>
-                <ul className="flex">
+                <ul className="flex flex-col md:flex-row">
                   <li>
                     <Image
                       src={addPlayStore}
@@ -71,13 +71,13 @@ export default function RootLayout({ children }) {
                 <h2 className="font-bold">Social Media</h2>
                 <ul className="flex">
                   <li>
-                    <Image src={fb} alt="logo" width="50" height="50" />
+                    <Image src={fb} alt="logo" width="40" height="40" />
                   </li>
                   <li>
-                    <Image src={ig} alt="logo" width="50" height="50" />
+                    <Image src={ig} alt="logo" width="40" height="40" />
                   </li>
                   <li>
-                    <Image src={pinterest} alt="logo" width="50" height="50" />
+                    <Image src={pinterest} alt="logo" width="40" height="40" />
                   </li>
                 </ul>
               </div>

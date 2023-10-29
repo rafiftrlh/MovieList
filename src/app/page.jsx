@@ -6,11 +6,15 @@ import DefaultModal from "./components/ModalSignin";
 export default function Home() {
   return (
     <>
-      <header className="py-3 px-6 shadow-md shadow-gray-200">
+      <header className="py-3 px-6 shadow-md shadow-gray-200 bg-white">
         <nav className="flex container mx-auto justify-between items-center">
           <Image src={logo} alt="logo" width="35" height="35" />
           <div>
-            <input type="text" placeholder="Searching" className="rounded-none text-sm border-transparent border-b-2 border-b-gray-500 border"/>
+            <input
+              type="text"
+              placeholder="Searching"
+              className="rounded-none bg-transparent text-sm border-transparent border-b-2 border-b-gray-500 border"
+            />
           </div>
           <div>
             <DefaultModal />
