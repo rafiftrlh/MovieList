@@ -1,5 +1,12 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import Image from "next/image";
+import logo from "@/assets/logo.svg";
+import addPlayStore from "@/assets/addPlayStore.svg";
+import addAppStore from "@/assets/addAppStore.svg";
+import fb from "@/assets/fb.svg";
+import ig from "@/assets/ig.svg";
+import pinterest from "@/assets/pinterest.svg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +18,76 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <footer className="bg-gray-500 py-5 px-16 text-slate-100 text-sm flex flex-col items-center">
+          <div className="container flex justify-between border-b-2 py-5">
+            <div className="w-96">
+              <Image
+                src={logo}
+                alt="logo"
+                width="40"
+                height="40"
+                className="mb-5"
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+                rem incidunt voluptatibus animi ipsam impedit dicta qui voluptas
+                nostrum vitae, fugiat quod dignissimos ullam fuga.
+              </p>
+            </div>
+            <div className="">
+              <ul className="flex flex-col gap-3">
+                <li>Tentang Kami</li>
+                <li>Blog</li>
+                <li>Layanan</li>
+                <li>Karir</li>
+                <li>Pusat Media</li>
+              </ul>
+            </div>
+            <div className="">
+              <div className="">
+                <h2 className="font-bold">Download</h2>
+                <ul className="flex">
+                  <li>
+                    <Image
+                      src={addPlayStore}
+                      alt="logo"
+                      width="150"
+                      height="150"
+                    />
+                  </li>
+                  <li>
+                    <Image
+                      src={addAppStore}
+                      alt="logo"
+                      width="150"
+                      height="150"
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div className="">
+                <h2 className="font-bold">Social Media</h2>
+                <ul className="flex">
+                  <li>
+                    <Image src={fb} alt="logo" width="50" height="50" />
+                  </li>
+                  <li>
+                    <Image src={ig} alt="logo" width="50" height="50" />
+                  </li>
+                  <li>
+                    <Image src={pinterest} alt="logo" width="50" height="50" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <h2 className="mt-5">
+            Copyright © 2000-202 MilanTV. All Rights Reserved
+          </h2>
+        </footer>
+      </body>
     </html>
   );
 }

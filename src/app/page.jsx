@@ -10,7 +10,7 @@ export default function Home() {
         <nav className="flex container mx-auto justify-between items-center">
           <Image src={logo} alt="logo" width="35" height="35" />
           <div>
-            <input type="text" placeholder="Searching" />
+            <input type="text" placeholder="Searching" className="rounded-none text-sm border-transparent border-b-2 border-b-gray-500 border"/>
           </div>
           <div>
             <DefaultModal />
