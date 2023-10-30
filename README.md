@@ -4,6 +4,7 @@
 
 - [About](#about)
 - [Build in](#build_in)
+- [Hal Kurang](#hal_kurang)
 
 ## About <a name = "about"></a>
 
@@ -40,3 +41,10 @@ React : https://react.dev/
 
 - #### UI COMPONENTS LIBRARY
   Flow Bite React : https://www.flowbite-react.com/
+
+## Hal Kurang <a name = "hal_kurang"></a>
+
+- Fitur Search
+- Fitur Detail Movie
+- Fitur Kategori
+- Total Pagination Tidak Dinamis

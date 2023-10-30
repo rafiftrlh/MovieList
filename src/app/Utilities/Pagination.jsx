@@ -29,12 +29,14 @@ const Pagination = ({ page, setPage }) => {
         </button>
       )}
       <button>{page} of 40749</button>
-      <button
-        onClick={handleNextPage}
-        className="transition hover:text-blue-500"
-      >
-        <AiOutlineRight />
-      </button>
+      {page >= 40749 ? null : (
+        <button
+          onClick={handleNextPage}
+          className="transition hover:text-blue-500"
+        >
+          <AiOutlineRight />
+        </button>
+      )}
     </div>
   );
 };
