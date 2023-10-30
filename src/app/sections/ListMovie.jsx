@@ -24,7 +24,7 @@ export default function ListMovie() {
           <option value="popularity.asc">Popularity ASC</option>
         </select>
       </div>
-      <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 justify-center sm:justify-evenly gap-0 md:gap-3 lg:gap-5">
+      <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-center sm:justify-evenly gap-5 md:gap-3 lg:gap-5">
         {data?.results?.map((item, index) => (
           <Link href={`/movie/${item.id}`} key={item.id}>
             <Card

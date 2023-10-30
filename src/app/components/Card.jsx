@@ -5,7 +5,7 @@ import { AiFillStar } from "react-icons/ai";
 export default function Card({ image, title, popularity, overview }) {
   return (
     <>
-      <div className="rounded-md bg-slate-300 w-60 h-[520px] relative shadow-xl overflow-hidden scale-90 md:scale-100">
+      <div className="rounded-md bg-slate-300 w-48 h-[430px] md:w-60 md:h-[520px] relative shadow-xl overflow-hidden md:scale-100">
         <Image src={imageUrl + image} alt={title} width="1000" height="1000" />
         <div className="px-2 mt-5">
           <h3 className="font-semibold text-lg line-clamp-1">{title}</h3>
