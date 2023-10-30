@@ -1,13 +1,38 @@
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
-const Pagination = ({}) => {
+const Pagination = ({ page, setPage }) => {
+  const scrollTop = () => {
+    scrollTo({
+      behavior: "smooth",
+      top: 0,
+    });
+  };
+
+  const handleNextPage = () => {
+    setPage((prevState) => prevState + 1);
+    scrollTop();
+  };
+
+  const handlePrevPage = () => {
+    setPage((prevState) => prevState - 1);
+    scrollTop();
+  };
+
   return (
     <div className="flex justify-center items-center py-4 px-2 gap-5 font-bold text-lg">
-      <button className="transition hover:text-blue-500">
-        <AiOutlineLeft />
-      </button>
-      <button>1</button>
-      <button className="transition hover:text-blue-500">
+      {page <= 1 ? null : (
+        <button
+          onClick={handlePrevPage}
+          className="transition hover:text-blue-500"
+        >
+          <AiOutlineLeft />
+        </button>
+      )}
+      <button>{page} of 40749</button>
+      <button
+        onClick={handleNextPage}
+        className="transition hover:text-blue-500"
+      >
         <AiOutlineRight />
       </button>
     </div>

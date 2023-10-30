@@ -21,7 +21,7 @@ export default function Home() {
           </div>
         </nav>
       </header>
-      <main className="mt-10 container mx-auto relative flex items-center flex-col">
+      <main className="container mx-auto relative flex items-center flex-col">
         <ListMovie />
       </main>
     </>

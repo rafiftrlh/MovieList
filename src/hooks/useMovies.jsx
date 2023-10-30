@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import axios from "@/lib/api";
 
-const useGetMovies = (sortBy, page = 1) => {
+const useGetMovies = (sortBy, page) => {
   const [dataMovies, setDataMovies] = useState([]);
 
   useEffect(() => {

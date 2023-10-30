@@ -8,13 +8,18 @@ import Pagination from "../Utilities/Pagination";
 
 export default function ListMovie() {
   const [sortBy, setSortBy] = useState("popularity.desc");
-  const params = useSearchParams();
+  const [page, setPage] = useState(1);
 
-  const data = useGetMovies(sortBy, params.get("page"));
+  const data = useGetMovies(sortBy, page);
   return (
     <>
-      <div>
-        <select name="" id="" onChange={(e) => setSortBy(e.target.value)}>
+      <div className="my-6">
+        <select
+          className="py-2 px-4 rounded-md border-2 outline-none"
+          name=""
+          id=""
+          onChange={(e) => setSortBy(e.target.value)}
+        >
           <option value="popularity.desc">Popularity DESC</option>
           <option value="popularity.asc">Popularity ASC</option>
         </select>
@@ -32,32 +37,7 @@ export default function ListMovie() {
           </Link>
         ))}
       </div>
-      {/* <div className="flex justify-center gap-10 mt-10 mb-10">
-        <ul className="flex items-center gap-5">
-          <li>
-            <AiOutlineLeft />
-          </li>
-          <li>
-            <Link href="/?page=1">1</Link>
-          </li>
-          <li>
-            <Link href="/?page=2">2</Link>
-          </li>
-          <li>
-            <Link href="/?page=3">3</Link>
-          </li>
-          <li>
-            <Link href="/?page=4">4</Link>
-          </li>
-          <li>
-            <Link href="/?page=5">5</Link>
-          </li>
-          <li>
-            <AiOutlineRight />
-          </li>
-        </ul>
-      </div> */}
-      <Pagination />
+      <Pagination page={page} setPage={setPage} />
     </>
   );
 }
