@@ -9,7 +9,7 @@
 ## About <a name = "about"></a>
 
 Membuat Web Movie List <br/>
-Live Web :
+Live Web : https://movie-list-three-bice.vercel.app/
 
 ## Build in <a name = "build_in"></a>
 
